@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Movie } from 'src/app/models/movie.model';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
@@ -6,8 +9,25 @@ import { MovieService } from 'src/app/services/movie.service';
   templateUrl: './movie-input.component.html',
   styleUrls: ['./movie-input.component.css']
 })
-export class MovieInputComponent {
+export class MovieInputComponent implements OnInit {
 
-  constructor(private MovieService: MovieService) { }
+  movieForm!: FormGroup;
 
+  constructor(private MovieService: MovieService, private fb: FormBuilder) { }
+
+  onSubmit(): void {
+    const newMovie: Movie = this.movieForm.value;
+    console.log(newMovie);
+    this.MovieService.addMovie(newMovie).subscribe();
+    this.movieForm.reset();
+  } 
+
+  ngOnInit(): void {
+    this.movieForm = this.fb.group({
+      title: ['', Validators.required],
+      image: ['', Validators.required],
+      isWatched: [false],
+      isFavorite: [false]
+    });
+  }
 }

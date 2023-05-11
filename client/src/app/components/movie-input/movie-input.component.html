@@ -1,1 +1,19 @@
-<p>movie-input works!</p>
+<form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+    <label>
+        Title:
+        <input type="text" formControlName="title" required>
+    </label>
+    <label>
+        Image:
+        <input type="text" formControlName="image" required>
+    </label>
+    <label>
+        Watched:
+        <input type="checkbox" formControlName="isWatched">
+    </label>
+    <label>
+        Favorite:
+        <input type="checkbox" formControlName="isFavorite">
+    </label>
+    <button type="submit" [disabled]="movieForm.invalid">Add movie</button>
+</form>
