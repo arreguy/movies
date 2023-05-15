@@ -25,9 +25,10 @@ export class MovieInputComponent implements OnInit {
   ngOnInit(): void {
     this.movieForm = this.fb.group({
       title: ['', Validators.required],
-      image: ['', Validators.required],
-      isWatched: [false],
-      isFavorite: [false]
+      director: ['', Validators.required],
+      releaseDate: ['', Validators.required],
+      imageURL: ['', Validators.required],
+      isAvailable: [false]
     });
   }
 }

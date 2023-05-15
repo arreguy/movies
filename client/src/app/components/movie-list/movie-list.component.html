@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <h2 class="text-center">Movie List</h2>
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Release Date</th>
+              <th>Director</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let movie of this.movieService.movieArray.reverse()">
+              <td>{{ movie.title }}</td>
+              <td>{{ movie.releaseDate }}</td>
+              <td>{{ movie.director }}</td>
+              <td>
+                <button class="btn btn-danger btn-sm" (click)="onDelete()">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

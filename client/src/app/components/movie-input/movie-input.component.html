@@ -4,16 +4,20 @@
         <input type="text" formControlName="title" required>
     </label>
     <label>
+        Director:
+        <input type="text" formControlName="director" required>
+    </label>
+    <label>
+        Release Date:
+        <input type="text" formControlName="releaseDate" required>
+    </label>
+    <label>
         Image:
-        <input type="text" formControlName="image" required>
-    </label>
+        <input type="text" formControlName="imageURL" required>
+      </label>
     <label>
-        Watched:
-        <input type="checkbox" formControlName="isWatched">
+        Available
+        <input type="checkbox" formControlName="isAvailable">
     </label>
-    <label>
-        Favorite:
-        <input type="checkbox" formControlName="isFavorite">
-    </label>
-    <button type="submit" [disabled]="movieForm.invalid">Add movie</button>
+    <button type="submit" [disabled]="movieForm.invalid">Submit</button>
 </form>

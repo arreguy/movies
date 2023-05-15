@@ -5,16 +5,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovieInputComponent } from './components/movie-input/movie-input.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieInputComponent
+    MovieInputComponent,
+    MovieCardComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
