@@ -17,7 +17,6 @@ export class MovieInputComponent implements OnInit {
 
   onSubmit(): void {
     const newMovie: Movie = this.movieForm.value;
-    console.log(newMovie);
     this.MovieService.addMovie(newMovie).subscribe();
     this.movieForm.reset();
   } 

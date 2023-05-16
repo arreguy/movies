@@ -19,6 +19,7 @@ export class MovieService {
   }
 
   addMovie(movie: Movie): Observable<Movie> {
+    console.log(movie.title)
     return this.http.post<Movie>(`${this.URL}`, movie)
     .pipe(
       tap((newMovie: Movie) => {
