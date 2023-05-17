@@ -30,7 +30,7 @@ export class MovieService {
   }
 
   updateMovie(movie: Movie): Observable<Movie> {
-    return this.http.put<Movie>(`${this.URL}`, movie)
+    return this.http.put<Movie>(`${this.URL}/${movie._id}`, movie)
     .pipe(
       tap((newMovie: Movie) => {
         const index = this.movieArray.findIndex(m => m._id === movie._id);
