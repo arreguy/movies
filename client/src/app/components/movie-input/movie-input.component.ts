@@ -27,7 +27,7 @@ export class MovieInputComponent implements OnInit {
       director: ['', Validators.required],
       releaseDate: ['', Validators.required],
       imageURL: ['', Validators.required],
-      isAvailable: [false]
+      isAvailable: false
     });
   }
 }

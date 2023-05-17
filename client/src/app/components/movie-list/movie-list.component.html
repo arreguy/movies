@@ -1,6 +1,6 @@
-  <div *ngFor="let movie of movieService.movieArray" class="row mx-auto justify-content-center mt-2 mb-5"> 
-
-    <div class="card movie_card text-base bg-aux shadow m-2"> 
+<div class="d-flex flex-wrap justify-content-center mt-2 mb-5">
+  <div *ngFor="let movie of movieService.movieArray">
+    <div class="card movie_card text-base bg-aux shadow m-3"> 
 
       <!-- Imagem do Pôster -->
       <img src="{{ movie.imageURL }}" class="card-img-top" alt="Imagem do Pôster"> 
@@ -41,3 +41,4 @@
       </div>
     </div>
   </div>
+</div>
