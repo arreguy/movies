@@ -1,16 +1,43 @@
-  <div *ngFor="let movie of movieService.movieArray" class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="card movie_card">
-      <img src="{{ movie.imageURL }}" class="card-img-top" alt="...">
+<div *ngFor="let movie of movieService.movieArray" class="row mx-auto justify-content-center mt-2 mb-5"> 
+
+  <div class="card movie_card text-base bg-aux shadow m-2"> 
+
+    <!-- Imagem do Pôster -->
+    <img src="{{ movie.imageURL }}" class="card-img-top" alt="Imagem do Pôster"> 
+
       <div class="card-body">
-        <h5 class="card-title">{{ movie.title }}</h5>
-        <span class="movie_info">Ano de Lançamento: {{ movie.releaseDate }}</span>
-        <br>
-        <span class="movie_info">Diretor: {{ movie.director }}</span>
-        <span class="movie_info float-right">
-          <i data-toggle="tooltip" data-placement="bottom" title="Deletar" class="fas fa-trash"></i>
-        </span>
+
+        <!-- Título -->
+        <h4 class="card-title">{{ movie.title }}</h4>
+
+        <div class="col mb-2">
+
+          <!-- Diretor -->
+          <div class="row movie_info">
+              <p><b>Diretor:</b> {{ movie.director }}</p> 
+          </div>
+
+          <!-- Ano de Lançamento -->
+          <div class="row movie_info">
+              <p><b>Ano de Lançamento:</b> {{ movie.releaseDate }}</p>
+          </div>
+
       </div>
+
+      <hr> 
+
+      <!-- Ícone de Editar -->
+      <div class="col">
+        <button type="button" class="btn btn-card-secondary me-1 shadow">
+            <i data-placement="bottom" title="Editar" class="bi bi-pencil-square"></i>
+        </button>
+
+        <!-- Ícone de Deletar -->
+        <button type="button" class="btn btn-card-secondary ms-1 shadow">
+            <i data-placement="bottom" title="Deletar" class="bi bi-trash-fill"></i>
+        </button>
+        
+      </div>  
     </div>
   </div>
 </div>

@@ -1,23 +1,40 @@
-<form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
-    <label>
-        Title:
-        <input type="text" formControlName="title" required>
-    </label>
-    <label>
-        Director:
-        <input type="text" formControlName="director" required>
-    </label>
-    <label>
-        Release Date:
-        <input type="text" formControlName="releaseDate" required>
-    </label>
-    <label>
-        Image:
-        <input type="text" formControlName="imageURL" required>
-      </label>
-    <label>
-        Available
-        <input type="checkbox" formControlName="isAvailable">
-    </label>
-    <button type="submit" [disabled]="movieForm.invalid">Submit</button>
-</form>
+<nav class="navbar navbar bg-aux shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand text-base fs-2 fw-bold ms-3">Lista de Filmes</a>
+        <img src="assets/film.png" alt="film" class="ms-4 me-3">  
+
+    </div>
+</nav>
+
+<div class="d-flex justify-content-center">
+
+    <div class="bg-aux shadow rounded m-4 p-4 w-50" >
+
+        <h3 class="m-1 mb-3">Novo cadastro</h3>
+    
+        <form [formGroup]="movieForm" (ngSubmit)="onSubmit()" class="">
+    
+            <div class="row m-1 mb-3"> <!-- Título e Diretor -->
+                <input class="me-2 form-control inp-base col" type="text" placeholder="Título" formControlName="title" required>
+                <input class="ms-2 form-control inp-base col" type="text" placeholder="Diretor" formControlName="director" required>
+            </div>
+    
+            <div class="row m-1 mb-3"> <!-- Ano de Lançamento e URL -->
+                <input class="me-2 form-control inp-base col" type="number" placeholder="Ano de Lançamento" formControlName="releaseDate" required pattern="[0-9]*">
+                <input class="ms-2 form-control inp-base col" type="text" placeholder="URL do Pôster" formControlName="imageURL" required>  
+            </div>
+    
+            <div class="ms-2 m-2 form-check"> <!-- Disponibilidade -->
+                <input class="form-check-input inp-base" type="checkbox" value="" id="flexCheckDefault" formControlName="isAvailable">                <label class="text-base" for="flexCheckDefault">
+                Disponível
+                </label>
+            </div>
+
+            <hr>
+    
+            <div class="d-flex justify-content-end"> <!-- Confirmar -->
+                <button class="btn btn-base text-right m-1" type="submit" [disabled]="movieForm.invalid">Confirmar</button>
+            </div>
+        </form>            
+    </div>
+</div>

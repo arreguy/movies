@@ -1,1 +1,113 @@
-/* You can add global styles to this file, and also import other style files */
+.bg-base{
+    background-color: rgb(25,25,25) !important;
+}
+
+.bg-aux{
+    background-color: rgb(37,37,37) !important;
+}
+
+.text-base{
+    color: rgb(216, 212, 212) !important;
+
+}
+
+.btn-base{
+    background-color: rgb(37,37,37) !important;
+    border-color: rgb(85,85,85) !important;
+    color: rgb(216,212,212) !important;
+}
+
+.btn-base:hover{
+    background-color: rgb(42,42,42) !important;
+    border-color: rgb(42,42,42) !important;
+    color: rgb(216,212,212) !important;
+}
+
+.inp-base{
+    background-color: rgb(37,37,37) !important;
+    border-color: rgb(85,85,85) !important;
+    color: rgb(216,212,212) !important;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgb(155,155,155) !important;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid rgb(37,37,37) !important;
+    box-shadow: 0 0 3px rgb(37,37,37) !important;
+    -moz-box-shadow: 0 0 2.5px rgb(155,155,155) !important;
+    -webkit-box-shadow: 0 0 2.5px rgb(155,155,155) !important;
+}
+  
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    cursor: pointer;
+}
+
+
+input[type="checkbox"]:checked {
+    background-color: rgb(117, 117, 185) !important
+}
+    
+input:focus, textarea:focus, select:focus {
+outline-offset: 1px !important;
+outline: none !important;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(37,37,37) rgb(25,25,25) !important;
+}
+    
+*::-webkit-scrollbar {
+    width: 12px;
+}
+    
+*::-webkit-scrollbar-track {
+    background: rgb(37,37,37)
+}
+    
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(25,25,25) !important;
+    border-radius: 20px;
+    border: 3px solid rgb(37,37,37)
+}
+
+*::-webkit-resizer {
+        background-color: rgb(37,37,37);
+}
+
+.card {
+    max-width: 320px !important;
+  }
+
+.card-img-top {
+    margin-top: 12px;
+    width: 320px;
+    height: 450px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+      
+}
+
+.movie_info {
+    margin-bottom: -12px;
+}
+
+.btn-card-secondary{
+    margin-bottom: 8px;
+    width: 45px;
+    height: 45px;
+    border-radius: 45%;
+    background-color: rgb(42,42,42) !important;
+    border-color: rgb(42,42,42) !important;
+    color: rgb(216,212,212) !important;
+}
+
+.btn-card-secondary:hover{
+    background-color: rgb(37,37,37) !important;
+    border-color: rgb(37,37,37) !important;
+    color: rgb(216,212,212) !important;
+}
